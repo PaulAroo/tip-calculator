@@ -24,12 +24,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./design/final.png)
+![](./final.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/PaulAroo/tip-calculator)
-- Live Site URL: [Add live site URL here](https://paularoo.github.io/tip-calculator/)
+- Solution URL: [CODE](https://github.com/PaulAroo/tip-calculator)
+- Live Site URL: [PREVIEW](https://paularoo.github.io/tip-calculator/)
 
 ## My process
 
