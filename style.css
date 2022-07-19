@@ -108,7 +108,7 @@ header > h2 {
   width: min(95vw, 700px);
   justify-self: center;
   padding: 2rem;
-  gap: 0 1.5rem;
+  gap: 1.5rem;
   border-radius: 1rem;
   background-color: white;
 }
@@ -256,7 +256,7 @@ input[type="radio"]:checked + label {
 .display > button {
   background-color: var(--strong-cyan);
   border: none;
-  padding: 0.3rem 0;
+  padding: 0.5rem 0;
   color: var(--very-dark-cyan);
 }
 
@@ -275,4 +275,28 @@ input[type="radio"]:checked + label {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 640px) {
+  .select__btns > * {
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 560px) {
+  .container {
+    grid-template-rows: 0.2fr 2fr;
+  }
+
+  header > h2 {
+    margin-block: 2rem;
+  }
+
+  .calculator {
+    flex-direction: column;
+  }
+
+  .display {
+    gap: 1.5rem;
+  }
 }
