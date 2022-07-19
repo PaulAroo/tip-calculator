@@ -18,7 +18,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
-    <title>Starthrills| Tip calculator app</title>
+    <title>Starthrills | Tip calculator app</title>
   </head>
   <body>
     <div class="container">
@@ -28,20 +28,34 @@
       <section class="calculator">
         <div class="inputs">
           <div class="bill">
-            <label for="">Bill</label>
-            <input type="number" name="" id="" placeholder="0" />
+            <div class="label">
+              <label for="bill">Bill</label>
+              <p id="bill-error" class="hidden">Can't be zero</p>
+            </div>
+            <input
+              type="number"
+              name="Bill-Input"
+              id="bill"
+              placeholder="0"
+              min="1"
+            />
           </div>
           <div class="select">
-            <label for="">Select Tip %</label>
+            <label for="" class="label">Select Tip %</label>
             <div class="select__btns">
-              <button>5%</button>
-              <button>10%</button>
-              <button>15%</button>
-              <button>25%</button>
-              <button>50%</button>
+              <input type="radio" name="tip" id="five" value="5" />
+              <label for="five">5%</label>
+              <input type="radio" name="tip" id="ten" value="10" />
+              <label for="ten">10%</label>
+              <input type="radio" name="tip" id="fifteen" value="15" />
+              <label for="fifteen">15%</label>
+              <input type="radio" name="tip" id="twenty-five" value="25" />
+              <label for="twenty-five">25%</label>
+              <input type="radio" name="tip" id="fifty" value="50" />
+              <label for="fifty">50%</label>
               <input
                 type="number"
-                name=""
+                name="custom-tip"
                 id="custom"
                 class="custom"
                 placeholder="Custom"
@@ -49,22 +63,32 @@
             </div>
           </div>
           <div class="people">
-            <label for="">Number of People</label>
-            <input type="number" name="" id="" placeholder="0" />
+            <div class="label">
+              <label for="people">Number of People</label>
+              <p id="people-count-error" class="hidden">Can't be zero</p>
+            </div>
+
+            <input
+              type="number"
+              name="no-of-people"
+              id="people"
+              placeholder="0"
+              min="1"
+            />
           </div>
         </div>
         <div class="display">
           <div class="output">
             <div>
               <p>Tip Amount <br /><span>/ person</span></p>
-              <span class="output__number">$0.00</span>
+              <span class="output__number" id="tip-amount">$0.00</span>
             </div>
             <div>
               <p>Total <br /><span>/ person</span></p>
-              <span class="output__number">$0.00</span>
+              <span class="output__number" id="total">$0.00</span>
             </div>
           </div>
-          <button disabled>RESET</button>
+          <button id="reset" disabled>RESET</button>
         </div>
       </section>
     </div>
@@ -77,3 +101,9 @@
     <script src="./script.js"></script>
   </body>
 </html>
+
+<!-- <button data-active="false">5%</button>
+              <button data-active="false">10%</button>
+              <button data-active="false">15%</button>
+              <button data-active="false">25%</button>
+              <button data-active="false">50%</button> -->
