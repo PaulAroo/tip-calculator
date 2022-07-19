@@ -80,12 +80,14 @@ function reset() {
   billInput.value = "";
   peopleCountInput.value = "";
   customTipinput.value = "";
+  tipAmount.innerText = "$0.00";
+  total.innerText = "$0.00";
   uncheckRadioButton();
   resetButton.setAttribute("disabled", "");
 }
 
 function renderOutput(tipPerPerson, totalPerPerson) {
-  tipAmount.innerText = tipPerPerson;
-  total.innerText = totalPerPerson;
+  tipAmount.innerText = `$${tipPerPerson}`;
+  total.innerText = `$${totalPerPerson}`;
   resetButton.removeAttribute("disabled");
 }
